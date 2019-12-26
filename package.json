@@ -11,6 +11,7 @@
     "docker":true,
     "name": "Input_",
     "dependencies": {
+        "PyAutoGUI" : "0.9.48"
     },
     "title": {
         "en": "Enter Text",
