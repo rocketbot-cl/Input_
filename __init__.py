@@ -23,8 +23,52 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
     pip install <package> -t .
 
 """
+import os
+import sys
 
-import pyautogui as pag
+base_path = tmp_global_obj["basepath"]
+cur_path = os.path.join(base_path, 'modules', 'Input_', 'libs')
+
+cur_path_x64 = os.path.join(cur_path, 'Windows' + os.sep +  'x64' + os.sep)
+cur_path_x86 = os.path.join(cur_path, 'Windows' + os.sep +  'x86' + os.sep)
+
+if sys.maxsize > 2**32 and cur_path_x64 not in sys.path:
+        sys.path.append(cur_path_x64)
+if sys.maxsize > 32 and cur_path_x86 not in sys.path:
+        sys.path.append(cur_path_x86)
+
+import tkinter as tk
+import r_pyautogui as pag
+
+
+def crear_ventana(text, titulo):
+    # Crear la ventana
+    ventana = tk.Tk()
+    ventana.title(titulo)
+    ventana.geometry("400x100")  # Establecer tamaño de la ventana
+
+    # Crear label
+    label = tk.Label(ventana, text=text)
+    label.pack()
+
+    # Crear el cuadro de texto
+    cuadro_texto = tk.Text(ventana, width=30, height=2)
+    cuadro_texto.pack()
+    
+
+    # Crear el botón de aceptar
+    def aceptar():
+        global mod_input_texto
+        mod_input_texto = cuadro_texto.get(1.0, tk.END)  # Obtener el texto del cuadro
+        ventana.destroy()  # Cerrar la ventana
+        
+
+    boton_aceptar = tk.Button(ventana, text="Aceptar", command=aceptar)
+    boton_aceptar.pack()
+
+    # Mostrar la ventana
+    ventana.focus_force()
+    ventana.mainloop()
 
 """
     Obtengo el modulo que fue invocado
@@ -40,4 +84,18 @@ if module == "sendText":
     text = pag.prompt(text=text_, title=title_)
 
     SetVar(var_,text)
+    
+if module == "sendText2":
+    text_ = GetParams('text_')
+    title_ = GetParams('title_')
+    var_ = GetParams('var_')
+    
+    mod_input_texto = None
+    
+    crear_ventana(text_, title_)
+    print(mod_input_texto)
+    lineas = mod_input_texto.split("\n")
+    lineas = lineas[:-1]
+    result = "\n".join(lineas)
+    SetVar(var_, result)
 
