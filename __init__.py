@@ -81,9 +81,24 @@ if module == "sendText":
     title_ = GetParams('title_')
     var_ = GetParams('var_')
 
-    text = pag.prompt(text=text_, title=title_)
+    try:
+        text = pag.prompt(text=text_, title=titlee_)
+        SetVar(var_,text)
+    except:
+        print("trying second method")
+        mod_input_texto = None
+    
+        crear_ventana(text_, title_)
+        try:
+            lineas = mod_input_texto.split("\n")
+            lineas = lineas[:-1]
+            text = "\n".join(lineas)
+            SetVar(var_, text)
+        except AttributeError as e:
+            print(e)
+            SetVar(var_, mod_input_texto)
+            
 
-    SetVar(var_,text)
     
 if module == "sendText2":
     text_ = GetParams('text_')
@@ -93,9 +108,12 @@ if module == "sendText2":
     mod_input_texto = None
     
     crear_ventana(text_, title_)
-    print(mod_input_texto)
-    lineas = mod_input_texto.split("\n")
-    lineas = lineas[:-1]
-    result = "\n".join(lineas)
-    SetVar(var_, result)
+    try:
+        lineas = mod_input_texto.split("\n")
+        lineas = lineas[:-1]
+        result = "\n".join(lineas)
+        SetVar(var_, result)
+    except Exception as e:
+        print(e)
+        SetVar(var_, mod_input_texto)
 

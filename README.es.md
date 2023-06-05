@@ -17,12 +17,6 @@ Para instalar el módulo en Rocketbot Studio, se puede hacer de dos formas:
 1. Guardar Texto en variable  
 Guarda el texto ingresado en una variable
 
-2. Obtener valor de input  
-Este comando utiliza un método alternativo (tkinter) al comando 'Guardar Texto en variable' para obtener el valor de un input.  
-
-
-
-
 ----
 ### OS
 

@@ -22,12 +22,3 @@ Stores the entered text in a variable
 |Enter the window title|Input that allows you to select the title that the window will have.|Prompt|
 |Enter the window text|Input that allows you to select the descriptive text that the window will have.|Ingrese texto:|
 |Assign result to a variable|Input that allows you to select the name of the variable where the result will be saved.|Variable|
-
-### Get input value
-  
-This command uses an alternative method (tkinter) to the 'Store text in a variable' command to get the value of an input.
-|Parameters|Description|example|
-| --- | --- | --- |
-|Enter the window title|Input that allows you to select the title that the window will have.|Prompt|
-|Enter the window text|Input that allows you to select the descriptive text that the window will have.|Ingrese texto:|
-|Assign result to a variable|Input that allows you to select the name of the variable where the result will be saved.|Variable|

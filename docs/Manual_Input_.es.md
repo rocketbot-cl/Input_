@@ -22,12 +22,3 @@ Guarda el texto ingresado en una variable
 |Ingrese el título de la ventana|Input que permite seleccionar el título que tendrá la ventana.|Prompt|
 |Ingrese el texto de la ventana|Input que permite seleccionar el texto descriptivo que tendrá la ventana.|Ingrese texto:|
 |Asignar resultado a variable|Input que permite seleccionar el nombre de la variable donde se guardará el resultado.|Variable|
-
-### Obtener valor de input
-  
-Este comando utiliza un método alternativo (tkinter) al comando 'Guardar Texto en variable' para obtener el valor de un input.
-|Parámetros|Descripción|ejemplo|
-| --- | --- | --- |
-|Ingrese el título de la ventana|Input que permite seleccionar el título que tendrá la ventana.|Prompt|
-|Ingrese el texto de la ventana|Input que permite seleccionar el texto descriptivo que tendrá la ventana.|Ingrese texto:|
-|Asignar resultado a variable|Input que permite seleccionar el nombre de la variable donde se guardará el resultado.|Variable|
