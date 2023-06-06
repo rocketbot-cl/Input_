@@ -17,12 +17,6 @@ To install the module in Rocketbot Studio, it can be done in two ways:
 1. Store text in a variable  
 Stores the entered text in a variable
 
-2. Get input value  
-This command uses an alternative method (tkinter) to the 'Store text in a variable' command to get the value of an input.  
-
-
-
-
 ----
 ### OS
 

@@ -22,12 +22,3 @@ Armazena o texto inserido em uma variável
 |Digite o título da janela|Entrada que permite selecionar o título que a janela terá.|Prompt|
 |Digite o texto da janela|Entrada que permite selecionar o texto descritivo que a janela terá.|Ingrese texto:|
 |Atribuir resultado a uma variável|Entrada que permite selecionar o nome da variável onde o resultado será salvo.|Variable|
-
-### Obter valor de input
-  
-Este comando utiliza um método alternativo (tkinter) ao comando 'Guardar Texto em variável' para obter o valor de um input.
-|Parâmetros|Descrição|exemplo|
-| --- | --- | --- |
-|Digite o título da janela|Entrada que permite selecionar o título que a janela terá.|Prompt|
-|Digite o texto da janela|Entrada que permite selecionar o texto descritivo que a janela terá.|Ingrese texto:|
-|Atribuir resultado a uma variável|Entrada que permite selecionar o nome da variável onde o resultado será salvo.|Variable|
